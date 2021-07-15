@@ -1,0 +1,79 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+// Optional
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+
+$container-padding-x: 15px;
+$grid-gutter-width: 30px;
+
+$gutters: (
+  0: 0,
+  1: 15px,
+  2: 30px,
+  3: 45px,
+  4: 60px,
+  5: 75px,
+);
+
+@mixin make-container($padding-x: $container-padding-x) {
+  max-width: 1440px;
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+$breakpoints: (
+  small: 768px,
+  medium: 992px,
+  large: 1200px,
+);
+
+//Colors
+$main-text-color: #000;
+$black-03: #b3b3b3;
+$black-05: #808080;
+$black-08: #333;
+$gray-link-color: $black-05;
+$main-blue-color: #0057ff;
+$main-pink-color: #fe7eb2;
+$main-cyan-color: #3db5c9;
+
+//Font-sizes
+$titleBigFontSizes: (
+  null: (45px, 55px, normal),
+  small: (60px, 70px, -0.1px),
+  medium: (80px, 90px, -0.2px),
+);
+
+$titleFontSizes: (
+  null: (38px, 45px, normal),
+  small: (46px, 50px, -0.01em),
+  medium: (56px, 60px, -0.02em),
+);
+
+$subtitleFontSizes: (
+  null: (16px, 24px, normal),
+  small: (18px, 26px, normal),
+  medium: (20px, 28px, normal),
+);
+
+$textFullLineHeight: (
+  null: (16px, 16px, normal),
+  small: (18px, 18px, normal),
+  medium: (20px, 20px, normal),
+);
+
+$buttonFontSizes: (
+  null: (18px, 24px, normal),
+  small: (22px, 28px, normal),
+  medium: (24px, 30px, -0.01em),
+);

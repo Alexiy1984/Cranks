@@ -1,6 +1,64 @@
-$body-color: slateblue;
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+@import "mixins";
+@import "fontfaces";
 
 body {
-  color: $body-color;
-  font-family: sans-serif;
+  color: $main-text-color;
+  font-family: 'Inter', sans-serif;
 }
+
+h1 {
+  @include font-size($titleBigFontSizes);
+}
+
+h2 {
+  @include font-size($titleFontSizes);
+
+  max-width: 755px;
+  margin: auto;
+}
+
+.btn {
+  @include font-size($buttonFontSizes);
+
+  border-radius: 20px;
+  padding: 20px;
+
+  &-pink {
+    background-color: $main-pink-color;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($main-pink-color, 5);
+      color: #fff;
+    }
+
+    &:active {
+      background-color: darken($main-pink-color, 10);
+      color: #fff;
+    }
+  }
+
+  &-cyan {
+    background-color: $main-cyan-color;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($main-cyan-color, 20);
+      color: #fff;
+    }
+
+    &:active {
+      background-color: darken($main-cyan-color, 20);
+      color: #fff;
+    }
+  }
+}
+
+@import "header";
+@import "subheader";
+@import "heroblock";
+@import "webandapp";
+@import "useblock";
+@import "footer";

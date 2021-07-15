@@ -1,0 +1,27 @@
+$useblockTitleMargins: (
+  null: (0, auto, 55px, auto),
+  small: (0, auto, 60px, auto),
+  medium: (0, auto, 80px, auto),
+);
+
+$useblockButtonMargins: (
+  null: (0, auto, 80px, auto),
+  small: (0, auto, 100px, auto),
+  medium: (0, auto, 120px, auto),
+);
+
+.useblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include element-indent($useblockTitleMargins, 'margin');
+
+    text-align: center;
+  }
+
+  &__button {
+    @include element-indent($useblockButtonMargins, 'margin');
+  }
+}

@@ -1,0 +1,28 @@
+$subheaderFontSizes: (
+  null: (18px, 24px, normal),
+  small: (22px, 28px, normal),
+  medium: (24px, 30px, -0.01em),
+);
+
+.subheader {
+  @include font-size($subheaderFontSizes);
+
+  padding: 25px 30px 0;
+  margin-bottom: 85px;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    font-weight: 900;
+  }
+
+  &__link {
+    transition: color 0.2s ease-in-out;
+    color: $main-text-color;
+
+    &:hover {
+      color: lighten($main-text-color, 20);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+$webandappMargins: (
+  null: (0, 0, 110px, 0),
+  small: (0, 0, 150px, 0),
+  medium: (0, 0, 250px, 0),
+);
+
+$webandappTitleMargins: (
+  null: (0, auto, 60px, auto),
+  small: (0, auto, 80px, auto),
+  medium: (0, auto, 100px, auto),
+);
+
+.webandapp {
+  @include element-indent($webandappMargins, 'margin');
+
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include element-indent($webandappTitleMargins, 'margin');
+
+    text-align: center;
+  }
+
+  picture {
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .webandapp {
+    picture {
+      border-radius: 50px;
+
+      img {
+        border-radius: 50px;
+      }
+    }
+  }
+}

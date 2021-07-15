@@ -1,0 +1,61 @@
+$heroblockTextFontSizes: (
+  null: (16px, 18px, normal),
+  small: (18px, 20px, -0.01em),
+  medium: (18px, 20px, -0.01em),
+);
+
+$heroblockMargins: (
+  null: (0, 0, 110px, 0),
+  small: (0, 0, 150px, 0),
+  medium: (0, 0, 250px, 0),
+);
+
+$heroblockTitleMargins: (
+  null: (0, auto, 50px, auto),
+  small: (0, auto, 60px, auto),
+  medium: (0, auto, 80px, auto),
+);
+
+$heroblockTextMargins: (
+  null: (0, 0, 75px, 0),
+  small: (0, 0, 90px, 0),
+  medium: (0, 0, 110px, 0),
+);
+
+.heroblock {
+  @include element-indent($heroblockMargins, 'margin');
+
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+
+  &__title {
+    @include element-indent($heroblockTitleMargins, 'margin');
+
+    max-width: 909px;
+    text-align: center;
+  }
+
+  &__button {
+    display: inline-block;
+    margin: 0 auto 60px;
+  }
+
+  picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    @include font-size($heroblockTextFontSizes);
+    @include element-indent($heroblockTextMargins, 'margin');
+
+    text-align: center;
+    color: $gray-link-color;
+  }
+}
