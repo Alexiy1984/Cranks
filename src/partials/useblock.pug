@@ -1,3 +1,13 @@
 .useblock
   h2.useblock__title Use catchy illustrations and  describe your project or idea to touch customers’ hearts
-  a.btn.btn-cyan.useblock__button Used ⟶ Blank Wireframe Kit
+  a.btn.btn-cyan.useblock__button
+    span.btn__ico 
+      include ../svg/star
+    span Used ⟶ Blank Wireframe Kit
+  .useblock-example 
+    .useblock-example__label Example
+    - var blockImages = Array.from(Array(3+1).keys()).slice(1)
+    each val in blockImages
+      - var path_name = 'images/useblockexample/'
+      - var image_name = 'img' + val
+      include picture

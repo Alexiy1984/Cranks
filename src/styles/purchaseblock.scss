@@ -1,0 +1,33 @@
+$purchaseblockTitleMargins: (
+  null: (0, auto, 45px, auto),
+  small: (0, auto, 50px, auto),
+  medium: (0, auto, 60px, auto),
+);
+
+$purchaseblockTextFontSizes: (
+  null: (16px, 20px, normal),
+  small: (18px, 22px, -0.01em),
+  medium: (18px, 23px, -0.01em),
+);
+
+$purchaseblockTextMargins: (
+  null: (0, auto, 80px, auto),
+  small: (0, auto, 100px, auto),
+  medium: (0, auto, 116px, auto),
+);
+
+.purchaseblock {
+  &__title {
+    @include element-indent($fullpackblockTitleMargins, 'margin');
+
+    text-align: center;
+  }
+
+  &__text {
+    @include font-size($purchaseblockTextFontSizes);
+    @include element-indent($purchaseblockTextMargins, 'margin');
+
+    text-align: center;
+    max-width: 673px;
+  }
+}

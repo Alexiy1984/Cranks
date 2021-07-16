@@ -39,8 +39,11 @@ $breakpoints: (
 
 //Colors
 $main-text-color: #000;
+$black-01: #fcfcfc;
+$black-02: #fafafa;
 $black-03: #b3b3b3;
 $black-05: #808080;
+$black-06: rgb(102, 102, 102);
 $black-08: #333;
 $gray-link-color: $black-05;
 $main-blue-color: #0057ff;
@@ -77,3 +80,37 @@ $buttonFontSizes: (
   small: (22px, 28px, normal),
   medium: (24px, 30px, -0.01em),
 );
+
+.btn svg {
+  height: 18px;
+  width: auto;
+}
+
+.btn__ico {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  height: 24px;
+}
+
+@media (min-width: 1200px) {
+  .btn__ico {
+    height: 30px;
+    margin-right: 14px;
+  }
+
+  .btn svg {
+    height: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .btn__ico {
+    height: 28px;
+    margin-right: 10px;
+  }
+
+  .btn svg {
+    height: 22px;
+  }
+}

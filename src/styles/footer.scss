@@ -24,12 +24,12 @@ $footerBottomMargins: (
 
 .footer {
   &__top {
-    border-top: 2px solid $main-text-color;
     padding-top: 38px;
   }
 
   &__menu {
     display: flex;
+    width: 100%;
 
     &__item {
       ul {
