@@ -19,6 +19,7 @@ $subheaderFontSizes: (
   &__link {
     transition: color 0.2s ease-in-out;
     color: $main-text-color;
+    text-decoration: none;
 
     &:hover {
       color: lighten($main-text-color, 20);

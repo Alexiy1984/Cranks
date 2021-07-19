@@ -16,6 +16,12 @@ $fullpackblockLinkMargins: (
   medium: (0, 0, 100px, 0),
 );
 
+$fullpackblockLinkFontSizes: (
+  null: (20px, 26px, normal),
+  small: (22px, 28px, -0.01em),
+  medium: (24px, 32px, -0.02em),
+);
+
 .fullpackblock {
   @include element-indent($fullpackblockMargins, 'margin');
 
@@ -32,12 +38,10 @@ $fullpackblockLinkMargins: (
 
   &__link {
     @include element-indent($fullpackblockLinkMargins, 'margin');
+    @include font-size($fullpackblockLinkFontSizes);
 
     text-decoration: none;
     display: block;
-    font-size: 16px;
-    line-height: 18px;
-    letter-spacing: normal;
     text-align: center;
     cursor: pointer;
     color: $main-blue-color;

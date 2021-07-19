@@ -1,0 +1,11 @@
+.purchasecard 
+  .purchasecard__logo= logo
+  p.purchasecard__title= title
+  p.purchasecard__price= price
+  ul.purchasecard__list
+    each item in list 
+      li.purchasecard__list-item= item
+  .purchasecard__button-container    
+    a.purchasecard__button(href=button_link target='_blank')= button_text   
+    a.purchasecard__button_secondary(href=button2_link target='_blank')= button2_text 
+

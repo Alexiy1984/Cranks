@@ -1,6 +1,23 @@
 .purchaseblock
   h2.purchaseblock__title Create domething awesome and bring some fun to your design using Cranks pack
-  p.purchaseblock__text 
+  p.purchaseblock__text#purchase
     | Wanna make your design gorgeous?  
     br
     | Use Cranks illustrations to make your wish true 
+  .purchaseblock__cardcontainer 
+    - var logo = 'cranks'
+    - var title = 'Start creating something wonderful using trendy Cranks illustrations'
+    - var price = '$28'
+    - var list = ['20 high-detailed stories', 'Funny heroes from IT universe', 'SVG, PNG, Ai sources', 'Compatible with Figma and Sketch']
+    - var button_text = 'Free PNG'
+    - var button_link = 'https://google.com'
+    - var button2_text = 'Purchase vectors for $28'
+    - var button2_link = 'https://google.com'
+    include purchasecard
+    - var logo = 'cranks'
+    - var title = 'Easy to use stock with more than 2500 vector and 3D illustrations under monthly subscription '
+    - var text = 'Use these illustrations to bring life into your sites, apps and presentations. For personal and commercial projects.'
+    - var price = '$28/month'
+    - var button_text = 'Explore Storytale'
+    - var button_link = 'https://storytale.io/'
+    include purchasecard_alt

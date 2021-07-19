@@ -3,6 +3,10 @@
 @import "mixins";
 @import "fontfaces";
 
+:root {
+  scroll-behavior: unset;
+}
+
 body {
   color: $main-text-color;
   font-family: 'Inter', sans-serif;
@@ -63,4 +67,6 @@ h2 {
 @import "useblock";
 @import "fullpackblock";
 @import "purchaseblock";
+@import "purchasecard";
+@import "subscribeblock";
 @import "footer";
