@@ -27,6 +27,17 @@ $footerBottomMargins: (
     padding-top: 40px;
   }
 
+  &__info {
+    @include font-size($footer-text);
+
+    color: $black-06;
+
+    svg {
+      display: block;
+      margin-bottom: 18px;
+    }
+  }
+
   &__menu {
     display: flex;
 
@@ -42,6 +53,14 @@ $footerBottomMargins: (
           &:last-child {
             margin-bottom: 0;
           }
+
+          svg {
+            margin-right: 10px;
+
+            path {
+              fill: $black-06;
+            }
+          }
         }
       }
 
@@ -49,19 +68,8 @@ $footerBottomMargins: (
         @include font-size($footer-text);
 
         text-decoration: none;
-        color: #7b7b7b;
+        color: $black-06;
       }
-    }
-  }
-
-  &__info {
-    @include font-size($footer-text);
-
-    color: #7b7b7b;
-
-    svg {
-      display: block;
-      margin-bottom: 18px;
     }
   }
 
@@ -82,7 +90,7 @@ $footerBottomMargins: (
     &__info {
       span {
         display: inline-block;
-        max-width: 280px;
+        max-width: 300px;
       }
     }
   }

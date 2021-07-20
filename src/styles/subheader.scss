@@ -14,6 +14,14 @@ $subheaderFontSizes: (
 
   &__logo {
     font-weight: 900;
+    text-decoration: none;
+    color: #000;
+
+    &:hover,
+    &:active {
+      color: #000;
+      cursor: pointer;
+    }
   }
 
   &__link {
